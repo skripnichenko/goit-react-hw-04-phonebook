@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from "prop-types";
 
-const ContactList = ({ contacts = [], deleteContact = () => { } }) => {
+const ContactList = ({ contacts = [], deleteContact }) => {
   return (
     <ul>
       {contacts.map(el => {
@@ -17,7 +17,7 @@ ContactList.propTypes = {
     name: PropTypes.string.isRequired,
     number: PropTypes.string.isRequired,
   })),
-  deleteContact: PropTypes.func,
+  deleteContact: PropTypes.func.isRequired,
 };
 
 export default ContactList
